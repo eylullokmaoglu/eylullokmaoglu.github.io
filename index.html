@@ -1,17 +1,132 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eylül Lokmaoğlu</title>
-    <style>
-      body {font-family: Arial, sans-serif; text-align: center; margin-top: 100px;}
-      h1 {color: #333;}
-      p {color: #666;}
-    </style>
-  </head>
-  <body>
-    <h1>Merhaba, ben Eylül 👋</h1>
-    <p>Bu benim ilk GitHub Pages sitem!</p>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eylül Lokmaoğlu | Portföy</title>
+  <meta name="description" content="Eylül Lokmaoğlu — öğrenci, geliştirici, üreten insan." />
+  <style>
+    :root{
+      --bg:#0b0d12; --card:#141821; --text:#e8ecf1; --muted:#9aa4b2; --brand:#7c9cff; --border:#222937;
+    }
+    *{box-sizing:border-box} html,body{margin:0; padding:0; font-family:system-ui,Segoe UI,Roboto,Arial}
+    body{background:var(--bg); color:var(--text)}
+    a{color:var(--brand); text-decoration:none}
+    .wrap{max-width:1000px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .avatar{width:44px; height:44px; border-radius:50%; object-fit:cover; border:1px solid var(--border)}
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{padding:8px 12px; background:var(--card); border:1px solid var(--border); border-radius:10px}
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; margin-top:22px}
+    .hero .card{padding:26px; background:var(--card); border:1px solid var(--border); border-radius:16px}
+    h1{margin:0 0 8px; font-size:38px}
+    p.lead{margin:8px 0 0; color:var(--muted)}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px}
+    .tile{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px}
+    .tile h3{margin:0 0 6px; font-size:18px}
+    .tile p{margin:0; color:var(--muted)}
+    .tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+    .tag{font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+    .contact{margin-top:26px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:10px 14px; background:var(--brand); color:#0a0f1a; border-radius:10px; font-weight:600}
+    footer{margin:30px 0 10px; text-align:center; color:var(--muted)}
+    .section-title{margin:26px 0 10px; font-size:22px}
+    .socials{display:flex; gap:10px}
+    .socials a{display:inline-flex; align-items:center; gap:8px; padding:8px 10px; background:var(--card); border:1px solid var(--border); border-radius:10px}
+    .k{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--muted); font-size:12px; margin-left:8px}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img class="avatar" src="assets/profile.jpg" alt="Eylül">
+        <div>
+          <strong>Eylül Lokmaoğlu</strong>
+          <div class="k">11. Sınıf • Web/CS</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projeler">Projeler</a>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Merhaba! Ben Eylül 👋</h1>
+        <p class="lead">Frontend öğreniyorum; küçük uygulamalar ve modern web arayüzleri yapıyorum. Hedef: <b>2025’te</b> 5 proje + 1 staj.</p>
+        <div class="contact" style="margin-top:14px">
+          <a class="btn" href="#iletisim">Benimle iletişime geç</a>
+          <div class="socials">
+            <a href="https://github.com/eylullokmaoglu" target="_blank" rel="noreferrer">
+              <!-- GitHub logo (mini SVG) -->
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.89-1.16-.89-1.16-.73-.5.06-.49.06-.49.81.06 1.24.83 1.24.83.72 1.23 1.9.87 2.36.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.6 7.6 0 012 0c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.14.45.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub
+            </a>
+            <a href="mailto:seninmailin@example.com">Mail</a>
+            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 10px">Hızlı Özgeçmiş</h2>
+        <ul style="margin:0; padding-left:18px; color:var(--muted)">
+          <li>HTML, CSS, JS temel ➜ aktif öğrenme</li>
+          <li>Okul kulübü: Yazılım/Robotik</li>
+          <li>Hedefler: React’e geçiş, 3 mini app</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 id="projeler" class="section-title">Projeler</h2>
+    <div class="grid">
+      <article class="tile">
+        <h3>Not Tutucu</h3>
+        <p>Tarayıcıda yerel olarak çalışan basit not uygulaması.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Demo</a> · <a href="#" target="_blank" rel="noreferrer">Kod</a></p>
+      </article>
+      <article class="tile">
+        <h3>Hava Durumu Mini</h3>
+        <p>Şehir arayıp anlık hava durumunu gösterir.</p>
+        <div class="tags"><span class="tag">API</span><span class="tag">Fetch</span></div>
+        <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Demo</a> · <a href="#" target="_blank" rel="noreferrer">Kod</a></p>
+      </article>
+      <article class="tile">
+        <h3>Portföy Tasarım</h3>
+        <p>Bu sitenin tasarım dosyası. Açık kaynak!</p>
+        <div class="tags"><span class="tag">Design</span><span class="tag">Open Source</span></div>
+        <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Kod</a></p>
+      </article>
+    </div>
+
+    <h2 id="hakkimda" class="section-title">Hakkımda</h2>
+    <div class="tile" style="padding:22px">
+      <p>Selam! Ben Eylül. Web’e meraklıyım; küçük ama düzgün projelerle ilerliyorum. Takım işini seviyorum ve hızlı öğrenirim. Yeni şeyler denemekten çekinmem.</p>
+    </div>
+
+    <h2 id="iletisim" class="section-title">İletişim</h2>
+    <div class="contact">
+      <a class="btn" href="mailto:seninmailin@example.com">Mail At</a>
+      <a class="btn" href="https://github.com/eylullokmaoglu" target="_blank" rel="noreferrer">GitHub Profilim</a>
+    </div>
+
+    <footer>© <span id="yil"></span> Eylül Lokmaoğlu · Made on GitHub Pages</footer>
+  </div>
+
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
